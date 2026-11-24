@@ -1,0 +1,17 @@
+[Unit]
+Description=Anti-Filter (ضد فیلتر) Claude Code Remote Control (tmux antifilter-rc, self-healing loop)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+User=ubuntu
+Group=ubuntu
+Environment=HOME=/home/ubuntu
+WorkingDirectory=/home/ubuntu/antifilter
+ExecStart=/home/ubuntu/.local/bin/antifilter-rc-start
+ExecStop=/usr/bin/tmux kill-session -t antifilter-rc
+
+[Install]
+WantedBy=multi-user.target

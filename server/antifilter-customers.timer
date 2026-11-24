@@ -1,0 +1,8 @@
+[Unit]
+Description=Every 30 min customer-name export (antifilter)
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=30min
+Persistent=true
+[Install]
+WantedBy=timers.target

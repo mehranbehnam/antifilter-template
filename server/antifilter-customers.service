@@ -1,0 +1,5 @@
+[Unit]
+Description=Export customer account names for the anti-filter docs
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/antifilter-customers-export.py

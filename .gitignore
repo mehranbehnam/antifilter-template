@@ -1,0 +1,7 @@
+.secrets/
+data/
+*.key
+*.json.secret
+webapp_url*.txt
+__pycache__/
+*.log
